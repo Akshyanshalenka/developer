@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    environment {
+        DEPLOY_TO = 'production'
+        stages{
+            stage ('initialization')
+            setps{
+                echo "$ DEPLOY_To"}
+                Stages{
+                    steps ('BUILD')
+                    echo "$ Building"
+                    stages{
+                    stage ('RELEASE')
+                    steps{
+                        echo "$ RELEASING"
+                    
+                    }
+                }
+            }
+        }
+    }
+}
